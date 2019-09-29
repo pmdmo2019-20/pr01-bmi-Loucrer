@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Body Mass Index</string>
+    <string name="btnreset">reset</string>
+    <string name="btncalculate_bmi">calculateBMI</string> />
+    <string name="lblheight">lblHeight</string> />
+    <string name="lblweight">lblWeight</string>
+    <string name="main_invalid_height">belowZeroHeight</string>
+    <string name="main_invalid_weight">belowZeroWeight</string>
+    <string name="main_overweight" />
+    <string name="main_bmi" />
+    />
     <!-- TODO -->
 </resources>
