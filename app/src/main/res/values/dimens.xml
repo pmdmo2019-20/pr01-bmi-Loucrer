@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- TODO -->
+    <dimen name="showResultHeightBMI">80dp</dimen>
+    <dimen name="fontSizeShowBMI">30dp</dimen>
+    <dimen name="paddingImage">15dp</dimen>
 </resources>
