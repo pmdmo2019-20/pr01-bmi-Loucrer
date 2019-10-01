@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean validateDate(){
-        if(txtWeight.getText().toString().equals("") || txtWeight.getText().toString().equals(" ")){
+        if(txtWeight.getText().toString().equals("") || txtWeight.getText().toString().equals(" ") || Float.parseFloat(txtWeight.getText().toString()) <= 0){
             txtWeight.setError(getString(R.string.main_invalid_weight));
             return false;
-        }else if(txtHeight.getText().toString().equals("") || txtHeight.getText().toString().equals(" ")) {
+        }else if(txtHeight.getText().toString().equals("") || txtHeight.getText().toString().equals(" ") || Float.parseFloat(txtHeight.getText().toString()) <= 0 ) {
             txtHeight.setError(getString(R.string.main_invalid_height));
             return false;
         }else{
