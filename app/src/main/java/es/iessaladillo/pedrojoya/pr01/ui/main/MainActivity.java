@@ -16,7 +16,7 @@ import es.iessaladillo.pedrojoya.pr01.utils.SoftInputUtils;
 public class MainActivity extends AppCompatActivity {
     private Button btnReset;
     private Button btnCalculate;
-    private TextView txtMessage;
+    private TextView lblResult;
     private TextView lblWeight;
     private TextView lblHeight;
     private EditText txtWeight;
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         /*Capture of ID*/
         btnReset = ActivityCompat.requireViewById(this,R.id.btnReset);
         btnCalculate = ActivityCompat.requireViewById(this,R.id.btnCalculate);
-        txtMessage = ActivityCompat.requireViewById(this,R.id.lblResult);
+        lblResult = ActivityCompat.requireViewById(this,R.id.lblResult);
         lblWeight = ActivityCompat.requireViewById(this,R.id.lblWeight);
         lblHeight = ActivityCompat.requireViewById(this,R.id.lblHeight);
         txtWeight = ActivityCompat.requireViewById(this, R.id.txtWeight);
@@ -47,25 +47,23 @@ public class MainActivity extends AppCompatActivity {
         image.setImageResource(R.drawable.bmi);
         /*Events of the buttons*/
         btnReset.setOnClickListener( view -> resetValues());
-        btnCalculate.setOnClickListener( v ->  txtMessage.setText(resultBMI()));
+        btnCalculate.setOnClickListener( v -> resultBMI());
     }
 
     private void resetValues() {
         txtHeight.setText("");
         txtWeight.setText("");
-        txtMessage.setText("");
+        lblResult.setText("");
         image.setImageResource(R.drawable.bmi);
     }
 
-    private String resultBMI(){
-        String message = "";
+    private void resultBMI(){
         float resultBMI;
         /*Validation of the fields and show his appropriate errors*/
         if(validateDate()){
             resultBMI = BC.calculateBmi(Float.parseFloat(String.valueOf(txtWeight.getText())), Float.parseFloat(String.valueOf(txtHeight.getText())));
-            message = getString(R.string.main_bmi, resultBMI,selectedImgAndPutText(resultBMI));
+            lblResult.setText(getString(R.string.main_bmi, resultBMI,selectedImgAndPutText(resultBMI)));
         }
-        return message;
     }
 
     private boolean validateDate(){
@@ -94,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 image.setImageResource(R.drawable.normal_weight);
                 break;
             case OVERWWEIGHT:
-                message = getString(R.string.overweight);
+                message = getString(R.string.main_overweight);
                 image.setImageResource(R.drawable.overweight);
                 break;
             case OBESITY_GRADE_1:

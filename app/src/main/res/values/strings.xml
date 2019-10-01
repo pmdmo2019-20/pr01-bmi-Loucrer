@@ -6,11 +6,10 @@
     <string name="lblweight">Weight</string>
     <string name="main_invalid_height">Invalid Height</string>
     <string name="main_invalid_weight">Invalid Weight</string>
-    <string name="main_overweight" />
-    <string name="main_bmi">BMI: %.2f %s</string>
+    <string name="main_overweight">Overweight</string>
+    <string name="main_bmi">BMI: %1$.1f %2$s</string>
     <string name="lowWeight">Low Weight</string>
     <string name="normalWeight">Normal Weight</string>
-    <string name="overweight">Overweight</string>
     <string name="obesity">Obesity Grade 1</string>
     <string name="obesity2">Obesity Grade 2</string>
     <string name="obesity3">Obesity Grade 3</string>
