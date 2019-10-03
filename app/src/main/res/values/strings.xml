@@ -15,7 +15,7 @@
     <string name="obesity3">Obesity Grade 3</string>
     <string name="heightHint">(m)</string>
     <string name="weightHint">(kg)</string>
-    <string name="emplyField">\"\"</string>
+    <string name="emplyField">""</string>
     />
     <!-- TODO -->
 </resources>
