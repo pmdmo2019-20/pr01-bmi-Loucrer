@@ -51,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void resetValues() {
-        txtHeight.setText("");
-        txtWeight.setText("");
-        lblResult.setText("");
+        txtHeight.setText(getString(R.string.emplyField));
+        txtWeight.setText(getString(R.string.emplyField));
+        lblResult.setText(getString(R.string.emplyField));
         image.setImageResource(R.drawable.bmi);
     }
 
