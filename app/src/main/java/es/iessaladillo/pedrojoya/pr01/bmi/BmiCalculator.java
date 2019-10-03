@@ -11,7 +11,14 @@ public class BmiCalculator {
      * @return The body mass index (BMI)
      */
     public float calculateBmi(float weightInKgs, float heightInMeters) {
-        return weightInKgs / (heightInMeters * heightInMeters);
+        if(weightInKgs <= 0){
+            throw new IllegalArgumentException("The weight can`t isn`t negative");
+        }
+        else if(heightInMeters <=0){
+            throw new IllegalArgumentException("The height can`t isn`t negative");
+        }else{
+            return weightInKgs / (heightInMeters * heightInMeters);
+        }
     }
 
 
